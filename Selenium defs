@@ -1,0 +1,32 @@
+package Selenium;
+
+import cucumber.api.java.en.Given;
+import cucumber.api.java.en.Then;
+import cucumber.api.java.en.When;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class SeleniumDefs {
+    WebDriver driver;
+    @Given("a")
+    public void a() {
+        System.setProperty("webdriver.chrome.driver", "C:\\Users\\40759\\Documents\\GitHub\\Cucumber\\src\\test\\resources\\chromedriver.exe");
+        WebDriver driver = new ChromeDriver();
+        driver.get("https://www.airbnb.com");
+//        System.setProperty("webdriver.chrome.driver", "C:\\Users\\40759\\Documents\\GitHub\\Cucumber\\src\\test\\resources\\chromedriver.exe");
+//        this.driver = new ChromeDriver();
+    }
+    @When("b")
+    public void b(){
+        this.driver.get("https://www.youtube.com");
+    }
+    @Then("c")
+    public void c() {
+//        WebElement search = this.driver.findElement(By.xpath("//*[@id=\"Koan-magic-carpet-koan-search-bar__input\"]"));
+//        search.click();
+//        search.sendKeys("Cluj");
+//        this.driver.close();
+    }
+}
