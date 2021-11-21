@@ -1,0 +1,23 @@
+package Selenium;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class DatePicker {
+    public static void main(String[] args) throws InterruptedException {
+        String S = System.setProperty("webdriver.chrome.driver", "C:\\Users\\40759\\Documents\\GitHub\\Cucumber\\src\\test\\resources\\chromedriver.exe");
+        WebDriver driver = new ChromeDriver();
+        driver.get("https://formy-project.herokuapp.com/datepicker");
+        Thread.sleep(300);
+        WebElement dateField = driver.findElement (By.id("datepicker"));
+        Thread.sleep(3000);
+        dateField.sendKeys("03/03/2020");
+        Thread.sleep(3000);
+        dateField.sendKeys(Keys.RETURN);
+        Thread.sleep(3000);
+        driver.quit();
+    }
+}
